@@ -126,6 +126,11 @@
   svg {
     color: #2f80ed;
     font-size: 1.8rem;
+    transition: 0.5s;
+
+    &:hover {
+      color: gold;
+    }
   }
 }
 
@@ -210,7 +215,6 @@
         height: 4px;
         width: 1.5rem;
         border-radius: 3px;
-        // background-color: rgba(47, 128, 237, 0.5);
         color: #2f80ed;
         transition: 0.5s;
       }

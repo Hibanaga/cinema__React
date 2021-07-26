@@ -1,0 +1,54 @@
+.wrapper__filmCatalog {
+  width: 90%;
+  margin: 1.5rem auto;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.wrapper__card--cardFilm {
+  width: 46%;
+  height: 25rem;
+}
+
+.img__card--cardFilm {
+  width: 100%;
+
+  border-radius: 1.6rem;
+}
+
+.liItem__card--cardFilm {
+  font-size: 1.2rem;
+  margin-left: 1.5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.wrapper__infoFilm--cardFilm {
+  width: 100%;
+  position: relative;
+  transition: 0.5s;
+
+  &:hover .title__card--cardFilm {
+    color: #007bff;
+  }
+}
+
+.title__card--cardFilm {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  transition: 0.5s;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}

@@ -3,8 +3,6 @@ import BookmarkBorderRoundedIcon from "@material-ui/icons/BookmarkBorderRounded"
 import StarOutlineRoundedIcon from "@material-ui/icons/StarOutlineRounded";
 
 export default function ItemSlide({ img, name, genres, year, rating }) {
-  console.log(genres);
-
   return (
     <div className="wrapperCardFilm">
       <button className="js-btn__addToQueue">
