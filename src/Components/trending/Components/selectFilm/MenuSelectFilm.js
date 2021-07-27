@@ -3,10 +3,19 @@ import KeyboardArrowDownRoundedIcon from "@material-ui/icons/KeyboardArrowDownRo
 import "./selectFilm.scss";
 import getMoviesGenres from "./utils/getMoviesGenres";
 import { connect } from "react-redux";
-import { ADD_GENRES } from "../../../../key/namesDispatch";
+import {
+  ADD_GENRES,
+  ADD_CURRGENRE,
+  ADD_SELECTEDCATEGORY,
+} from "../../../../key/namesDispatch";
 import SlideText from "./SlideText";
 
-function MenuSelectFilm({ genres, addGenresHandler }) {
+function MenuSelectFilm({
+  genres,
+  addGenresHandler,
+  addCurrGenreHandler,
+  addSelectedCatalogHandler,
+}) {
   const [toggleMenuRadio, setToggleMenuRadio] = useState(false);
   const [currGenre, setCurrGenre] = useState("All Genres");
   const [selectedMovie, setSelectedMovie] = useState("Featured");
@@ -27,10 +36,12 @@ function MenuSelectFilm({ genres, addGenresHandler }) {
 
   const changeCurrGenreHandler = (event) => {
     setCurrGenre(event.target.textContent);
+    addSelectedCatalogHandler(event.target.textContent);
   };
 
   const onChnageHandleToggle = (currContent) => {
     setSelectedMovie(currContent);
+    addCurrGenreHandler(currContent);
   };
 
   window.addEventListener("click", actionClickWindow);
@@ -121,6 +132,10 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   addGenresHandler: (genresList) =>
     dispatch({ type: ADD_GENRES, payload: genresList }),
+  addCurrGenreHandler: (currGenre) =>
+    dispatch({ type: ADD_CURRGENRE, payload: currGenre }),
+  addSelectedCatalogHandler: (currCategory) =>
+    dispatch({ type: ADD_SELECTEDCATEGORY, payload: currCategory }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(MenuSelectFilm);
