@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/cinema__React/static/css/main.737da411.chunk.css",
+    "main.js": "/cinema__React/static/js/main.047eb411.chunk.js",
+    "main.js.map": "/cinema__React/static/js/main.047eb411.chunk.js.map",
+    "runtime-main.js": "/cinema__React/static/js/runtime-main.d0830706.js",
+    "runtime-main.js.map": "/cinema__React/static/js/runtime-main.d0830706.js.map",
+    "static/css/2.68f636bc.chunk.css": "/cinema__React/static/css/2.68f636bc.chunk.css",
+    "static/js/2.06c1f69d.chunk.js": "/cinema__React/static/js/2.06c1f69d.chunk.js",
+    "static/js/2.06c1f69d.chunk.js.map": "/cinema__React/static/js/2.06c1f69d.chunk.js.map",
+    "index.html": "/cinema__React/index.html",
+    "static/css/2.68f636bc.chunk.css.map": "/cinema__React/static/css/2.68f636bc.chunk.css.map",
+    "static/css/main.737da411.chunk.css.map": "/cinema__React/static/css/main.737da411.chunk.css.map",
+    "static/js/2.06c1f69d.chunk.js.LICENSE.txt": "/cinema__React/static/js/2.06c1f69d.chunk.js.LICENSE.txt",
+    "static/media/backtothefuture.314aa45b.jpg": "/cinema__React/static/media/backtothefuture.314aa45b.jpg",
+    "static/media/bastards.3b18a86d.jpg": "/cinema__React/static/media/bastards.3b18a86d.jpg",
+    "static/media/fightclub.4d108340.jpg": "/cinema__React/static/media/fightclub.4d108340.jpg",
+    "static/media/logo.8c1cea37.svg": "/cinema__React/static/media/logo.8c1cea37.svg",
+    "static/media/madmax.7e1dd605.jpg": "/cinema__React/static/media/madmax.7e1dd605.jpg",
+    "static/media/oldboy.c0fe09e6.jpg": "/cinema__React/static/media/oldboy.c0fe09e6.jpg",
+    "static/media/revesiourdogs.aa3c31eb.jpg": "/cinema__React/static/media/revesiourdogs.aa3c31eb.jpg",
+    "static/media/slick-theme.css": "/cinema__React/static/media/slick.c94f7671.ttf",
+    "static/media/thedeparted.7efabe05.jpg": "/cinema__React/static/media/thedeparted.7efabe05.jpg",
+    "static/media/therewillbeblood.5a780147.jpg": "/cinema__React/static/media/therewillbeblood.5a780147.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d0830706.js",
+    "static/css/2.68f636bc.chunk.css",
+    "static/js/2.06c1f69d.chunk.js",
+    "static/css/main.737da411.chunk.css",
+    "static/js/main.047eb411.chunk.js"
+  ]
+}
