@@ -52,9 +52,7 @@ function MenuSelectFilm({
   }, []);
 
   useEffect(() => {
-    return () => {
-      window.removeEventListener("click", actionClickWindow);
-    };
+    return () => window.removeEventListener("click", actionClickWindow);
   });
 
   return (

@@ -17,7 +17,7 @@
   border-top-right-radius: 1.5rem;
   position: relative;
 
-  &:hover .title__card--cardFilm {
+  &:hover .title__card--cardFilm a {
     color: #007bff;
   }
 
@@ -89,7 +89,7 @@
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  color: #fff;
+  // color: #fff;
   margin-top: 10px;
   margin-bottom: 5px;
   transition: 0.5s;
@@ -100,6 +100,11 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   word-wrap: break-word;
+
+  a {
+    color: #e0e0e0;
+    text-decoration: none;
+  }
 }
 
 .icons__action--cardFilm {
@@ -113,6 +118,8 @@
 .js-btn__addToQueue--catalog {
   top: 15%;
   left: 5%;
+
+  cursor: pointer;
 }
 
 .rating__description--catalog {
@@ -122,8 +129,9 @@
 
 .js-btn__addToWatched--catalog {
   position: absolute;
-  top: 22.5%;
+  top: 30%;
   left: 22.5%;
+  cursor: pointer;
 
   padding: 0.2rem;
 
@@ -178,8 +186,167 @@
 
   border: none;
   outline: none;
+  margin-bottom: 5rem;
 
   &:hover {
     background-color: #2f80ed;
+  }
+}
+
+.js-btn__addToQueue__active {
+  svg {
+    color: gold;
+  }
+}
+
+@media (min-width: 375px) {
+  .wrapper__card--cardFilm {
+    height: 29rem;
+  }
+
+  .js-btn__addToWatched--catalog {
+    // visibility: visible;
+    // opacity: 1;
+
+    left: 25%;
+  }
+}
+
+@media (min-width: 425px) {
+  .wrapper__card--cardFilm {
+    height: 32rem;
+  }
+
+  .wrapper__filmCatalog {
+    width: 38.5rem;
+  }
+
+  .js-btn__addToWatched--catalog {
+    // visibility: visible;
+    // opacity: 1;
+
+    left: 27.5%;
+  }
+
+  .liItem__card--cardFilm {
+    font-size: 1.3rem;
+  }
+
+  .title__card--cardFilm {
+    padding-left: 0.5rem;
+  }
+
+  .menu__genres--cardFilm {
+    padding-left: 0.5rem;
+  }
+
+  .js-btn__addToQueue {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .js-btn__addToQueue svg {
+    font-size: 2.2rem;
+  }
+
+  .rating__description--cardFilm {
+    // width: 4rem;
+    height: 3.5rem;
+  }
+
+  .rating__description--cardFilm svg {
+    font-size: 2.2rem;
+  }
+
+  .rating__description--cardFilm .description__rating--cardFilm {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper__filmCatalog {
+    width: 64.8rem;
+  }
+
+  .wrapper__card--cardFilm {
+    height: 37.5rem;
+    width: 30%;
+  }
+
+  .title__card--cardFilm {
+    font-size: 2.3rem;
+  }
+
+  .liItem__card--cardFilm {
+    font-size: 1.5rem;
+  }
+
+  .AnyClassForContainer {
+    width: 4.5rem;
+    height: 4.5rem;
+
+    right: 7%;
+
+    svg {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper__filmCatalog {
+    width: 88rem;
+  }
+
+  .wrapper__card--cardFilm {
+    width: 23%;
+    height: 40rem;
+  }
+
+  .js-btn__addToWatched--catalog {
+    left: 30%;
+    top: 30%;
+
+    // visibility: visible;
+    // opacity: 1;
+
+    svg {
+      font-size: 8.5rem;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper__filmCatalog {
+    width: 1160px;
+  }
+
+  .wrapper__card--cardFilm {
+    width: 21%;
+  }
+
+  .wrapper__infoFilm--cardFilm {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .js-btn__addToQueue {
+    // visibility: visible;
+    // opacity: 1;
+
+    left: 8.5%;
+    top: 17.5%;
+  }
+
+  .wrapper__infoFilm--cardFilm::before {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .rating__description--catalog {
+    right: 8.5%;
+    top: 17.5%;
+
+    width: 6.5rem;
   }
 }

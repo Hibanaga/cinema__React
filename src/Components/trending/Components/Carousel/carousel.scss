@@ -221,3 +221,81 @@
     }
   }
 }
+
+@media (min-width: 375px) {
+  .wrapperCardFilm {
+    min-height: 22vh;
+  }
+}
+
+@media (min-width: 425px) {
+  .wrapperCardFilm {
+    min-height: 25vh;
+    // width: 90%;
+  }
+
+  .menu__genres--cardFilm {
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapperCardFilm {
+    height: 35vh;
+  }
+
+  .slick-dots {
+    left: -5%;
+    top: 120%;
+  }
+
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+
+  .slick-dots li button::before {
+    width: 13px;
+    height: 5px;
+  }
+
+  .slick-dots .slick-active button::before {
+    width: 1.5rem;
+    height: 6px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapperCardFilm {
+    height: 24rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapperCardFilm {
+    height: 27rem;
+  }
+
+  .slick-dots li button::before {
+    width: 15px;
+    height: 6px;
+  }
+
+  .title__film--cardFilm {
+    font-size: 3rem;
+  }
+
+  .menu__genres--cardFilm .liItem--cardFilm {
+    font-size: 1.6rem;
+  }
+
+  .slick-dots {
+    left: 24%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapperCardFilm {
+    height: 35vh;
+    cursor: pointer;
+  }
+}

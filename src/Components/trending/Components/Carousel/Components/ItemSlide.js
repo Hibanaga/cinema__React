@@ -1,13 +1,13 @@
 import React from "react";
-import BookmarkBorderRoundedIcon from "@material-ui/icons/BookmarkBorderRounded";
+// import BookmarkBorderRoundedIcon from "@material-ui/icons/BookmarkBorderRounded";
 import StarOutlineRoundedIcon from "@material-ui/icons/StarOutlineRounded";
 
 export default function ItemSlide({ img, name, genres, year, rating }) {
   return (
     <div className="wrapperCardFilm">
-      <button className="js-btn__addToQueue">
+      {/* <button className="js-btn__addToQueue">
         <BookmarkBorderRoundedIcon />
-      </button>
+      </button> */}
 
       <div className="rating__description--cardFilm">
         <StarOutlineRoundedIcon />{" "}

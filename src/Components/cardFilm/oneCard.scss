@@ -1,0 +1,392 @@
+.wrapper__oneCard--film {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  color: #fff;
+}
+
+.section__card__bg--film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 45rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(19, 23, 32, 0.5) 0%, #131720 100%);
+    pointer-events: none;
+  }
+}
+
+.img__card--film {
+  background: center top / cover no-repeat;
+
+  position: absolute;
+  z-index: 0;
+
+  width: 100%;
+  //   left: -10%;
+}
+
+.wrapper__info__card--film {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  top: 10%;
+
+  z-index: 4;
+}
+
+.title_infoCard--film {
+  color: #fff;
+
+  font-size: 3.2rem;
+  margin-bottom: 2rem;
+  line-height: 140%;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  margin-top: 35%;
+  margin-left: 5%;
+}
+
+.ulMenu__category--film {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 5%;
+
+  width: 85%;
+}
+
+.liItem__category--film {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 145%;
+  padding-bottom: 0.7rem;
+
+  svg {
+    font-size: 2.2rem;
+    color: #2f80ed;
+  }
+
+  &::before {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    content: "•";
+    color: #2f80ed;
+  }
+
+  &:first-child {
+    &::before {
+      content: "";
+      padding-left: 0;
+    }
+  }
+}
+
+.description__oneCard--film {
+  font-size: 1.6rem;
+  line-height: 145%;
+  display: block;
+
+  margin-left: 7.5%;
+  margin-top: 5%;
+  color: #e0e0e0;
+
+  &::first-letter {
+    padding-left: 4%;
+  }
+}
+
+.subTitle__oneCard--film {
+  //   width: 100%;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 100%;
+  margin-top: 7%;
+  margin-left: 7.5%;
+  margin-bottom: 0;
+}
+
+.wrapper__genres__list--film {
+  margin-left: 7.5%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description__genres__oneCard--film {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  min-width: 60px;
+  width: auto;
+  color: #e0e0e0;
+  font-size: 14px;
+  background-color: #151f30;
+  border-radius: 12px;
+  padding: 0 12px;
+  margin-right: 1.5rem;
+  display: 3rem;
+  margin: 1.5rem 0.5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.wrapper__genres__list--film {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.wrapper__commntary--film {
+  border-top: 1px solid rgba(47, 128, 237, 0.1);
+  // width: 90%;
+  // margin: 0 auto;
+  margin-left: 3%;
+  // border-top: 1px solid rgba(47, 128, 237, 1);
+}
+
+.titles__commentary--film {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+
+.title__commentary--film {
+  font-size: 2.4rem;
+  opacity: 0.5;
+  transition: 0.4s linear;
+
+  display: flex;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-left: 5%;
+  }
+}
+
+.icon_count--commentary {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  background-color: #2f80ed;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.js-form__addCommentary {
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(47, 128, 237, 0.1);
+  margin-top: 10%;
+  background-color: #131720;
+  margin-left: 7.5%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20%;
+}
+
+.js-input__commentary {
+  width: 100%;
+  height: 7.5rem;
+  border-radius: 15px;
+  background-color: #151f30;
+
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: #e0e0e0;
+
+  &::placeholder {
+    color: #e0e0e0;
+  }
+
+  resize: none;
+}
+
+.js-submit__addCommentary {
+  margin-top: 10%;
+  background-color: #2f80ed;
+  text-transform: uppercase;
+
+  border: none;
+  outline: none;
+  height: 5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.description__oneCard--film {
+  margin-left: 5%;
+  width: 90%;
+  margin: 3% auto;
+}
+
+.titles__commentary--film {
+  width: 95%;
+  margin: 10% auto;
+
+  &:last-child {
+    margin-left: 0%;
+  }
+}
+
+.js-form__addCommentary {
+  margin: 10% auto;
+
+  width: 90%;
+}
+
+@media (min-width: 425px) {
+  .description__oneCard--film {
+    line-height: 185%;
+  }
+
+  .subTitle__oneCard--film {
+    font-size: 3rem;
+  }
+
+  .titles__commentary--film {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 768px) {
+  .title_infoCard--film {
+    font-size: 4rem;
+    width: 55%;
+    margin-bottom: 5%;
+  }
+
+  .ulMenu__category--film {
+    width: 55%;
+  }
+
+  .liItem__category--film {
+    font-size: 2rem;
+
+    &::before {
+      padding-left: 1.5rem;
+    }
+  }
+
+  .description__oneCard--film {
+    font-size: 2rem;
+  }
+
+  .description__genres__oneCard--film {
+    font-size: 2rem;
+    padding: 2rem 2rem;
+  }
+
+  .wrapper__commntary--film {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .js-form__addCommentary {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title_infoCard--film {
+    font-size: 4.5rem;
+
+    &::first-letter {
+      padding-left: 3%;
+    }
+  }
+
+  .ulMenu__category--film {
+    width: 45%;
+  }
+
+  .liItem__category--film {
+    font-size: 2.3rem;
+
+    svg {
+      font-size: 2.8rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .js-form__addCommentary {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .section__card__bg--film {
+    border-bottom: 1px solid #131720;
+  }
+
+  .wrapper__info__card--film {
+    width: 1160px;
+    margin: 0 auto;
+  }
+
+  .title_infoCard--film {
+    margin-top: 12.5%;
+    font-size: 6.5rem;
+    width: 55%;
+    margin-bottom: 4.5%;
+  }
+
+  .liItem__category--film {
+    font-size: 2.6rem;
+  }
+
+  .wrapper__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .wrapper__commntary--film {
+    border: none;
+  }
+
+  .js-form__addCommentary {
+    margin-top: 4%;
+  }
+
+  .wrapper__actions {
+    margin-left: 15%;
+
+    border-top: 1px solid rgba(47, 128, 237, 0.1);
+  }
+}

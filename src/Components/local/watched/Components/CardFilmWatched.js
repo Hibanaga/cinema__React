@@ -3,24 +3,20 @@ import BookmarkBorderRoundedIcon from "@material-ui/icons/BookmarkBorderRounded"
 import StarOutlineRoundedIcon from "@material-ui/icons/StarOutlineRounded";
 import AddCircleOutlineRoundedIcon from "@material-ui/icons/AddCircleOutlineRounded";
 import RemoveCircleOutlineRoundedIcon from "@material-ui/icons/RemoveCircleOutlineRounded";
-import { connect } from "react-redux";
-import converterGenres from "../utils/converterGenres";
 import * as _ from "lodash";
-import checkerUniqItem from "../utils/checkerUniqItem";
 import { Link, useLocation } from "react-router-dom";
-import resizeNameString from "../utils/resizeNameString";
-// import resizeAOS from "../utils/resizeAOS";
+import { REMOVE_SELECTED } from "../../../../key/namesDispatch";
+import checkerUniqItem from "../../../trending/Components/trendingFilm/utils/checkerUniqItem";
+import { connect } from "react-redux";
 
-function CardFilm({
+function CardFilmWatched({
   id_film,
-  id_currFilm,
   genres,
   title,
   posterPath,
   voteAverage,
   release,
-  genreIDs,
-  currWidth,
+  removeSelectedItem,
 }) {
   const [isWatched, setIsWatched] = useState(false);
   const [isQueue, setIsQueue] = useState(false);
@@ -81,9 +77,9 @@ function CardFilm({
       setIsQueue(true);
     }
   };
-
   const onClickSaveToWatchedHandler = () => {
     let local = localStorage.getItem("itemsWatched");
+    removeSelectedItem(id_film);
 
     if (isWatched) {
       if (Array.isArray(JSON.parse(local))) {
@@ -121,12 +117,7 @@ function CardFilm({
   };
 
   return (
-    <div
-      className="wrapper__card--cardFilm"
-      data-aos={id_currFilm > 3 && "fade-up"}
-      data-aos-easing="linear"
-      data-aos-duration="1000"
-    >
+    <div className="wrapper__card--cardFilm">
       <div className="icons__action--cardFilm">
         <button
           className={
@@ -163,8 +154,6 @@ function CardFilm({
           className="img__card--cardFilm"
         />
       </div>
-
-      {/* to={{ pathname: `${id_film}` }} */}
       <div className="wrapp__description--cardFilm">
         <h2 className="title__card--cardFilm">
           <Link
@@ -173,16 +162,18 @@ function CardFilm({
               state: { from: location },
             }}
           >
-            {resizeNameString(currWidth, title)}
+            {title.length > 12 ? title.substring(0, 12) + "..." : title}
           </Link>
         </h2>
 
         <ul className="menu__genres--cardFilm">
-          {converterGenres(genres, genreIDs).map((item, idx) => (
-            <li className="liItem__card--cardFilm" key={idx}>
-              {item}
-            </li>
-          ))}
+          {genres !== undefined &&
+            genres.map(({ id, name }) => (
+              <li className="liItem__card--cardFilm" key={id}>
+                {name}
+              </li>
+            ))}
+
           {release && (
             <li className="liItem__card--cardFilm">{release.split("-")[0]}</li>
           )}
@@ -192,16 +183,9 @@ function CardFilm({
   );
 }
 
-const mapStateToProps = (state) => ({
-  genres: state.genres,
+const mapDispatchToProps = (dispatch) => ({
+  removeSelectedItem: (id_film) =>
+    dispatch({ type: REMOVE_SELECTED, payload: id_film }),
 });
 
-export default connect(mapStateToProps, null)(CardFilm);
-
-// 14 length name
-//id: 19404
-//title: "Dilwale Dulhania Le Jayenge"
-//poster_path: "/2CAL2433ZeIihfX1Hb2139CX0pW.jpg"
-//vote_average: 8.7
-//release_date: "1995-10-20"
-//genre_ids: (3) [35, 18, 10749]
+export default connect(null, mapDispatchToProps)(CardFilmWatched);

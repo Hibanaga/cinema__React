@@ -6,9 +6,11 @@ import FilmsCatalog from "./Components/trendingFilm/FilmsCatalog";
 export default function Main() {
   return (
     <main>
-      <Carousel />
-      <MenuSelectFilm />
-      <FilmsCatalog />
+      <>
+        <Carousel />
+        <MenuSelectFilm />
+        <FilmsCatalog />{" "}
+      </>
     </main>
   );
 }

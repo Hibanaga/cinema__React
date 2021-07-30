@@ -1,0 +1,112 @@
+.main__queue {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper__catalog--queue {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper__noFilms {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title__noFilms {
+  color: #1f3a69;
+
+  text-align: center;
+  font-size: 3rem;
+}
+
+@media (min-width: 320px) {
+  .wrapper__catalog--queue {
+    justify-content: space-between;
+  }
+
+  .wrapper__catalog--queue .wrapper__card--cardFilm {
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .main__queue {
+    width: 64.8rem;
+  }
+
+  .wrapper__catalog--queue {
+    justify-content: space-between;
+  }
+
+  .wrapper__catalog--queue .wrapper__card--cardFilm {
+    margin: 1rem 0;
+  }
+
+  .wrapper__catalog--queue .js-btn__addToWatched--catalog {
+    left: 30%;
+  }
+
+  .title__noFilms {
+    font-size: 4rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main__queue {
+    width: 88rem;
+  }
+
+  .wrapper__catalog--queue {
+    justify-content: space-between;
+    // justify-content: inherit;
+  }
+
+  .wrapper__catalog--queue .wrapper__card--cardFilm {
+    margin: 1rem 0;
+  }
+
+  .wrapper__catalog--queue .js-btn__addToWatched--catalog {
+    left: 27.5%;
+  }
+
+  .title__noFilms {
+    font-size: 4.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main__queue {
+    width: 1160px;
+    margin: 0 auto;
+  }
+
+  .wrapper__catalog--queue {
+    justify-content: space-between;
+    // justify-content: inherit;
+    width: 1160px;
+    margin: 0 auto;
+  }
+
+  .wrapper__catalog--queue .wrapper__card--cardFilm {
+    margin: 2rem 0;
+  }
+
+  .wrapper__catalog--queue .js-btn__addToWatched--catalog {
+    left: 27.5%;
+  }
+
+  .title__noFilms {
+    font-size: 5.5rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
