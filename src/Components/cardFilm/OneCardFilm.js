@@ -9,10 +9,8 @@ import { ADD_FILM } from "../../key/namesDispatch";
 
 function OneCardFilm({ addCurrFilmHandler, films }) {
   const location = useLocation();
-
-  console.log(location);
   useEffect(() => {
-    fetchingCurrFilm(location.pathname.slice(15)).then((data) =>
+    fetchingCurrFilm(location.pathname.split("/").reverse()[0]).then((data) =>
       addCurrFilmHandler([data])
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps

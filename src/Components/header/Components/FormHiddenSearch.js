@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
-// import { Redirect, useLocation } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 export default function FormHiddenSearch() {
   const [query, setQuery] = useState("");
-  // const [redirectRefer, setRedirectRefer] = useState(false);
-  // const location = useLocation();
+  const [redirectRefer, setRedirectRefer] = useState(false);
 
   useEffect(() => {
     const local = localStorage.getItem("querySearch");
-    setQuery(local);
+    if (local) {
+      setQuery(local);
+    }
   }, []);
 
   const handleSubmitForm = (event) => {
     event.preventDefault();
-    // setRedirectRefer(true);
+    setRedirectRefer(!redirectRefer);
   };
 
   const handleChangeQuery = (event) => {
@@ -24,9 +25,13 @@ export default function FormHiddenSearch() {
 
   return (
     <>
-      {/* {redirectRefer && (
-        <Redirect to={{ pathname: `${query}`, state: { from: location } }} />
-      )} */}
+      {redirectRefer && (
+        <Redirect
+          to={{
+            pathname: `/cinema__React/${query}`,
+          }}
+        />
+      )}
       <form
         action=""
         className="js-form__searchBox"

@@ -7,18 +7,33 @@ import getFilmsByIDs from "./utils/fetchingFilmsIDs";
 import CardFilmWatched from "./Components/CardFilmWatched";
 import NotFilms from "../queue/Components/NotFilms";
 
-function WatchedFilms({ films, loadSelectedFilmsHandler }) {
+function WatchedFilms({
+  films,
+  loadSelectedFilmsHandler,
+  clearFilmsCatalogHandler,
+}) {
   useEffect(() => {
     const local = localStorage.getItem("itemsWatched");
 
     if (local) {
-      getFilmsByIDs(JSON.parse(local)).then((data) =>
-        loadSelectedFilmsHandler(data)
-      );
+      if (Array.isArray(JSON.parse(local))) {
+        getFilmsByIDs(JSON.parse(local)).then((data) =>
+          loadSelectedFilmsHandler(data)
+        );
+      } else {
+        getFilmsByIDs([JSON.parse(local)]).then((data) =>
+          loadSelectedFilmsHandler(data)
+        );
+      }
+    }
+
+    if (!local) {
+      clearFilmsCatalogHandler([]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // console.log(films);
   return (
     <main className="main__watched">
       <div className="wrapper__catalog--watched">
@@ -58,7 +73,8 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   addGenresHandler: (genresList) =>
     dispatch({ type: ADD_GENRES, payload: genresList }),
-  clearFilmsCatalogHandler: () => dispatch({ type: CLEAR_FILMS }),
+  clearFilmsCatalogHandler: (emptyArr) =>
+    dispatch({ type: CLEAR_FILMS, payload: emptyArr }),
   loadSelectedFilmsHandler: (loadedItems) =>
     dispatch({ type: ADD_FILM, payload: loadedItems }),
 });

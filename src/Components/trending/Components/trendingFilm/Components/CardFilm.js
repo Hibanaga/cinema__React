@@ -21,6 +21,7 @@ function CardFilm({
   release,
   genreIDs,
   currWidth,
+  allPages,
 }) {
   const [isWatched, setIsWatched] = useState(false);
   const [isQueue, setIsQueue] = useState(false);
@@ -123,7 +124,7 @@ function CardFilm({
   return (
     <div
       className="wrapper__card--cardFilm"
-      data-aos={id_currFilm > 3 && "fade-up"}
+      data-aos={allPages === undefined ? id_currFilm > 3 && "fade-up" : null}
       data-aos-easing="linear"
       data-aos-duration="1000"
     >
@@ -169,7 +170,7 @@ function CardFilm({
         <h2 className="title__card--cardFilm">
           <Link
             to={{
-              pathname: `/cinema__React/${id_film}`,
+              pathname: `/cinema__React/film_detail/${id_film}`,
               state: { from: location },
             }}
           >

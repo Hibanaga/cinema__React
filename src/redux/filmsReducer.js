@@ -17,7 +17,7 @@ export default function filmsReducer(state = [], { payload, type }) {
     case ADD_LOCALFILM:
       return [...state, payload];
     case CLEAR_FILMS:
-      return [];
+      return payload;
     default:
       return state;
   }

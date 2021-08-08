@@ -158,7 +158,7 @@ function CardFilmWatched({
         <h2 className="title__card--cardFilm">
           <Link
             to={{
-              pathname: `/cinema__React/${id_film}`,
+              pathname: `/cinema__React/film_detail/${id_film}`,
               state: { from: location },
             }}
           >

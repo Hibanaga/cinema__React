@@ -30,6 +30,10 @@ export default function Carousel() {
       setCurrHeight(event.target.innerWidth);
     }
 
+    if (currHeight >= 320) {
+      setSettings({ ...settings, slidesToShow: 1, centerMode: false });
+    }
+
     if (currHeight >= 425) {
       setSettings({
         ...settings,
