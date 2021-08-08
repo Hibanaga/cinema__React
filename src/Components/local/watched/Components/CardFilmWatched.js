@@ -149,7 +149,7 @@ function CardFilmWatched({
 
       <div className="wrapper__infoFilm--cardFilm">
         <img
-          src={`http://image.tmdb.org/t/p/w500` + posterPath}
+          src={`https://image.tmdb.org/t/p/w500` + posterPath}
           alt={title}
           className="img__card--cardFilm"
         />

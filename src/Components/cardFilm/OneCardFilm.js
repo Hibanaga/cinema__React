@@ -22,7 +22,7 @@ function OneCardFilm({ addCurrFilmHandler, films }) {
         <article className="wrapper__oneCard--film">
           <div className="section__card__bg--film">
             <img
-              src={`http://image.tmdb.org/t/p/w500` + films[0].poster_path}
+              src={`https://image.tmdb.org/t/p/w500` + films[0].poster_path}
               alt="test"
               className="img__card--film"
             />
